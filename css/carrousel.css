@@ -1,0 +1,69 @@
+.principalc {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente en el eje X */
+    justify-content: center; /* Centra verticalmente en el eje Y */
+    height: auto; /* Ajusta la altura para ocupar la altura completa de la ventana */
+    margin-top: 2%;
+}
+/* Estilos para el carrusel */
+.carrousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.imagenesCarrousel {
+    display: none;
+    max-width: 100%;
+    max-height: 300px;
+}
+
+.imagenesCarrousel img {
+    width: 100%;
+    height: auto;
+}
+
+.flechas {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.flechas a {
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.flechas a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para los puntos de navegación */
+.puntos {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #4b8d5d;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot:hover {
+    background-color: #555;
+}

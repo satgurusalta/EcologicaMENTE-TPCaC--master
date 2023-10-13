@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcologicaMENTE</title>
+    <link rel="shortcut icon" href="Imagenes/iconsecología.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/estilosform.css">
+    <link rel="stylesheet" href="./css/carrousel.css">
+    <script src="https://kit.fontawesome.com/6903087ae8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header-->
+        <header class="header"></header>
+
+        <div class="principalc">
+            <!-- Carrousel -->
+            <div class="carrousel" id="carousel">
+                <div class="imagenesCarrousel" id="img-1">
+                    <img src="./Imagenes/img-1-sitio.jpg" alt="Descripción">
+                </div>
+                <div class="imagenesCarrousel" id="img-2">
+                    <img src="./Imagenes/img-2-sitio.jpg" alt="">
+                </div>
+                <div class="imagenesCarrousel" id="img-3">
+                    <img src="./Imagenes/img-3-sitio.jpg" alt="">
+                </div>
+                <div class="imagenesCarrousel" id="img-4">
+                    <img src="./Imagenes/img-4-sitio.jpg" alt="">
+                </div>
+                <div class="flechas">
+                    <a class="chevron-left" id="prev"><i class="fa-solid fa-chevron-left"></i></a>
+                    <a class="chevron-right" id="next"><i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Carrousel Puntos -->
+            <div class="puntos" id="dots">
+                <a href="#img-1" class="dot"></a>
+                <a href="#img-2" class="dot"></a>
+                <a href="#img-3" class="dot"></a>
+                <a href="#img-4" class="dot"></a>
+            </div>
+        </div>
+
+        <!--API clima-->
+        <div id="app" class="clima">
+            <h1>Consulte el  Clima</h1>
+            <input type="text" class="input-clima" v-model="ciudad" placeholder="Ingrese una ciudad">
+            <button @click="buscarClima">Buscar</button>
+            <div id="datosClima" v-if="ciudadNombre">
+                <h2>{{ ciudadNombre }}, {{ paisNombre }}</h2>
+                <p>La temperatura actual es: {{ temperatura }} °C</p>
+                <p>La humedad es: {{ humedad }} %</p>
+                <img v-bind:src="iconoURL" alt="Icono del clima">
+                <p>La descripción meteorológica es: {{ descripcion }}</p>
+            </div>
+        </div>
+
+
+        <main class="principal">
+            <section class="seccion">
+                <h3>Te enseñamos sobre ecología</h3>
+                <article class="articulos">
+                    <p>Puedes obtener más información sobre el cambio climático en Argentina <a
+                            href="https://www.argentina.gob.ar/ambiente/cambio-climatico/que-es-el-cambio-climatico"
+                            target="_blank">aquí</a>.</p>
+                </article>
+                <article class="articulos">
+                    <p>Descubre cómo cuidar el ecosistema en <a
+                            href="https://www.ecologiaverde.com/como-cuidar-el-ecosistema-3107.html"
+                            target="_blank">este artículo</a>.</p>
+                </article>
+                <article class="articulos">
+                    <p>Explora información sobre los tipos de reciclaje en <a
+                            href="https://recicladoslatrinchera.com/tipos-de-reciclaje-y-en-que-consisten/"
+                            target="_blank">este enlace</a>.</p>
+                </article>
+            </section>
+
+            <!-- Aside -->
+            <aside class="aside">
+                <div class="publicidad"> <img src="./Imagenes/noticia-medio-ambiente.gif"></div>
+
+            </aside>
+        </main>
+
+
+        <!-- Footer -->
+        <footer class="footer"></footer>
+    </div>
+    <!--Javascript para API clima-->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/script.js"></script>
+    <!-- Javascript para el Carrousel-->
+    <script src="./js/carrousel.js"></script>
+    <!-- JavaScript para el encabezado y pie -->
+    <script src="./js/header&footer.js"></script>
+
+</body>
+
+</html>

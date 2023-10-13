@@ -1,0 +1,243 @@
+
+body {    
+    background-color: rgb(188, 206, 188);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-color: whitesmoke;
+}
+
+h1{
+    font-family:'Times New Roman', Times, serif; 
+    font-size: 48px;
+    margin: 0;
+}
+.header {
+    border: 1px solid black;
+    background-color: rgb(105, 173, 131);
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+.principal {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px; 
+  }
+
+section {
+    flex: 1;
+    margin: 0 5px; 
+    padding: 2px;
+    border: 1px solid #ccc; 
+}
+
+
+
+section h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 36px;
+}
+
+ul {
+    list-style-type: none;
+    text-align: justify;
+    padding: 0;
+}
+
+ul::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
+li::before {
+    content: "● ";
+    color: red;
+}
+
+.articulos {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f4eff5;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold; 
+}
+
+a:hover {
+    text-decoration: underline; /* Subraya el enlace cuando el cursor está sobre él */
+}
+
+
+
+.aside {
+    flex: 1;
+    background-color: #f0f0f0;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.aside img {
+    width: 100%;
+    height: auto; /* Para mantener la proporción original de la imagen */
+}
+
+
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.pie p {
+    margin: 0;
+}
+
+.clima {
+    background-color: rgb(245, 243, 228);
+    box-shadow: #333;
+    text-align: center; 
+    max-width: 90%;   
+    margin: 0 auto;    
+
+}
+
+
+.input-clima {
+    padding: 10px;
+    font-size: 16px;
+    max-width: 50%;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #5ad2e8;
+    color: #ffffff;
+    border: black;
+    cursor: pointer;
+  }
+  
+  #datosClima {
+    align-items: center;
+    margin-top: 16px;
+    font-size: 12px;
+  }
+
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporción 16:9 para video */
+    padding-top: 30px; /* Espacio extra para elementos superpuestos, si los hay */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+ /* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 576px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .nav a {
+        margin: 10px 0;
+    }
+
+    .principal {
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    section {
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .logo img {
+        max-width: 100px;
+    }
+}
+
+/* Estilos para tabletas y pantallas medianas */
+@media (min-width: 577px) and (max-width: 1024px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    .logo img {
+        max-width: 100px;
+    }
+
+    .nav a {
+        margin: 0 10px;
+    }
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 1025px) {
+    .aside {
+        padding: 20px;
+    }
+
+    .clima {
+        max-width: 70%;
+    }
+
+    .input-clima {
+        max-width: 40%;
+    }
+
+    #datosClima {
+        font-size: 16px;
+    }
+}
